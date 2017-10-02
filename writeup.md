@@ -105,11 +105,11 @@ Then I did the following steps to draw the lane-lines:
 
 ![alt text][image6]
 
-* Follow a sliding window search strategy to identify the x and y positions of all non-zero pixels in the image in each window and search within a margin around the `leftx_base` and `rightx_base` positions. 9 sliding windows are used to search along the height of the image.
+* Follow a sliding window search strategy to identify the x and y positions of all non-zero pixels in the image in each window and search within a margin around the `leftx_base` and `rightx_base` positions. 9 sliding windows are used to search along the height of the image. This is implemented inside the `sliding_window_search()` function in the 10th code cell of the `lane_line.ipynb` notebook.
 
 ![alt text][image7]
 
-* A margin search is used to apply the sliding window within a margin of +/- 100 pixels around the `leftx_base` and `rightx_base` found in the particular sliding window. This assumption is practical since lane lines are not found randomly across the image. I stored the positions of the left lane line points and the right lane points and fit them using a 2nd degree polynomial. This is achieved inside the `margin_search()` function. **Identify the lines**
+* A margin search is used to apply the sliding window within a margin of +/- 100 pixels around the `leftx_base` and `rightx_base` found in the particular sliding window. This assumption is practical since lane lines are not found randomly across the image. I stored the positions of the left lane line points and the right lane points and fit them using a 2nd degree polynomial. This is achieved inside the `margin_search()` function in the 11th code cell of the `lane_line.ipynb` notebook.
 
 ![alt text][image8]
 
